@@ -22,4 +22,19 @@ p {
 h1, h2, h3, h4, h5, h6 {
   color: var(--title-color);
 }
- 
+
+/* Scrollbar */
+body::-webkit-scrollbar {
+  width: 3px;
+}
+
+/* Scrollbar bg */
+body::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+/* Scrollbar thumb */
+body::-webkit-scrollbar-thumb {
+  background: var(--tertiary-color);
+  border-radius: 40px;
+}
