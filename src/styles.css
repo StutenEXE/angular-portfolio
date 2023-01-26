@@ -1,3 +1,5 @@
+/* Imports */
+
 /* Global styles */
 :root {
   --background-color: #16161a;
@@ -10,7 +12,7 @@
 body {
   margin: 0;
   background-color: var(--background-color);
-  font-family: proxima-nova, sans-serif;
+  font-family: 'league-spartan', sans-serif;
 }
 
 p {
@@ -20,3 +22,4 @@ p {
 h1, h2, h3, h4, h5, h6 {
   color: var(--title-color);
 }
+ 
