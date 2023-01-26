@@ -1,0 +1,39 @@
+.nav-container {
+  position: sticky;
+  width: 100vw;
+  background-color: var(--secondary-color);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+
+}
+
+.links {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  gap: 5px;
+  align-items: center;
+  margin-right: 5px;
+}
+
+.link {
+  padding: 0 10px;
+  min-width: 75px;
+  height: 40px;
+  border-radius: 15px;
+  transition: 300ms ease-in-out;
+  margin: 15px 0;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.link:hover {
+  background-color: var(--tertiary-color);
+}
