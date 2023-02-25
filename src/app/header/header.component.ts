@@ -14,6 +14,7 @@ export class HeaderComponent implements OnInit {
 
   ngOnInit(): void {
     this.constructNewTech();
+
     setInterval(() => {
       this.constructNewTech();
     }, 2000)
@@ -21,9 +22,12 @@ export class HeaderComponent implements OnInit {
 
   async constructNewTech() {
     let newTech = this.getRandomTech();
+
     if (this.tech !== "") this.TECHS.push(this.tech);
+
     this.TECHS.splice(this.TECHS.indexOf(newTech), 1)
     this.tech = "";
+
     for(let i = 0; i < newTech.length; i++) {
       await new Promise(f => setTimeout(f, 50 + Math.random() * 50));
       this.tech = this.tech + newTech.charAt(i);
