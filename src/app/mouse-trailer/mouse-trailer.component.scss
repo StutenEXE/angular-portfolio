@@ -1,0 +1,56 @@
+#mouse-bg {
+    background: linear-gradient(
+        to right,
+        var(--tertiary-color),
+        var(--secondary-color)
+    );
+    height: 250px;
+    aspect-ratio: 1;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    translate: -50% -50%;
+    border-radius: 50%;
+    animation: rotation 20s infinite;
+    z-index: -2;
+}
+
+@keyframes rotation {
+    0% {
+        rotate: 0deg;
+    }
+
+    50% {
+        scale: 1 1.4;
+    }
+
+    100% {
+        rotate: 360deg;
+    }
+}
+
+#mouse-blur {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    backdrop-filter: blur(100px);
+}
+
+#mouse-trailer {
+    position: fixed;
+    z-index: -2;
+    top: 10vh;
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+}
+
+#sticky-container {
+    height: 100vh;
+    width: 100vw;
+    position: absolute;
+}
+
+/* #mouse-bg::-webkit-scrollbar {
+    display: none;
+} */

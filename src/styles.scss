@@ -1,0 +1,54 @@
+/* Global styles */
+:root {
+  --background-color: #16161a;
+  --title-color: #fffffe;
+  --text-color: #94a1b2;
+  --secondary-color: #7f5af0;
+  --tertiary-color: #2cb67d;
+}
+
+body {
+  margin: 0;
+  background-color: var(--background-color);
+  font-family: 'league-spartan', sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline; 
+  cursor: pointer;  
+}
+
+
+p {
+  color: var(--text-color);
+
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--title-color);
+}
+
+/* Scrollbar */
+body::-webkit-scrollbar {
+  width: 3px;
+}
+
+/* Scrollbar bg */
+body::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+/* Scrollbar thumb */
+body::-webkit-scrollbar-thumb {
+  background: var(--tertiary-color);
+  border-radius: 40px;
+}
