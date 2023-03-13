@@ -1,0 +1,13 @@
+<div class="project-container">
+    <a [href]="project.html_url">
+        <h4>{{ project.name }}</h4>
+    </a>
+    <p *ngFor="let language of project.languages">{{ language.name }} - {{ language.share }}%</p>
+
+    <canvas *ngIf="project.languages != undefined && project.languages.length > 0 " baseChart class="chart" 
+        [data]="pieChartData" 
+        [type]="pieChartType" 
+        [options]="pieChartOptions">
+    </canvas>
+
+</div>

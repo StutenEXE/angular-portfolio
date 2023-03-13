@@ -3,7 +3,7 @@ import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
-  styleUrls: ['./header.component.css']
+  styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent implements OnInit {
   TECHS: string[] = ["Java Springboot", "Java", "VB.NET", "PHP", "JavaScript", "SQL", "C", "C++", "Python", "Angular"];
