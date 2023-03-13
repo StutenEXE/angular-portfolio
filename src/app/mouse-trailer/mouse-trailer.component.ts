@@ -3,7 +3,7 @@ import { Component, Input, OnInit } from '@angular/core';
 @Component({
   selector: 'app-mouse-trailer',
   templateUrl: './mouse-trailer.component.html',
-  styleUrls: ['./mouse-trailer.component.css']
+  styleUrls: ['./mouse-trailer.component.scss']
 })
 export class MouseTrailerComponent implements OnInit {
 
