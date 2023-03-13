@@ -1,0 +1,45 @@
+#mouse-bg {
+    background: linear-gradient(
+        to right,
+        var(--tertiary-color),
+        var(--secondary-color)
+    );
+    height: 250px;
+    aspect-ratio: 1;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    translate: -50% -50%;
+    border-radius: 50%;
+    animation: rotation 20s infinite;
+    z-index: -2;
+}
+
+@keyframes rotation {
+    0% {
+        rotate: 0deg;
+    }
+
+    50% {
+        scale: 1 1.4.
+    }
+
+    100% {
+        rotate: 360deg;
+    }
+}
+
+#mouse-blur {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    backdrop-filter: blur(100px);
+}
+
+#mouse-trailer {
+    z-index: -2;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    overflow: hidden;
+}
