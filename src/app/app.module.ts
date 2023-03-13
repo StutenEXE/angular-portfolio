@@ -8,6 +8,7 @@ import { AboutmeComponent } from './aboutme/aboutme.component';
 import { ProjectsComponent } from './projects/projects.component';
 import { TechnologiesComponent } from './technologies/technologies.component';
 import { ContactsComponent } from './contacts/contacts.component';
+import { MouseTrailerModule } from './mouse-trailer/mouse-trailer.module';
 
 @NgModule({
   declarations: [
@@ -17,12 +18,12 @@ import { ContactsComponent } from './contacts/contacts.component';
     AboutmeComponent,
     ProjectsComponent,
     TechnologiesComponent,
-    ContactsComponent
+    ContactsComponent,
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    MouseTrailerModule
   ],
-  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
