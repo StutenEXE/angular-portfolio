@@ -1,4 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Inject, OnInit } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+import { ProjectService } from 'src/services/project.services';
+import { Project } from 'src/models/project';
+import { Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-projects',
@@ -7,9 +11,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ProjectsComponent implements OnInit {
 
-  constructor() { }
+  sub!: Subscription;
+  projects: Project[] = [];
+
+  constructor(private projectService: ProjectService) {}
 
   ngOnInit(): void {
+    this.sub = this.projectService.getProjects().subscribe({
+        next: (data: Project[]) => {
+          this.projects = data;
+          console.log(data);
+        }
+      });
+    
   }
-
 }

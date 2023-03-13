@@ -1,0 +1,31 @@
+.project-container {
+    width: 20vw;
+    min-width: 100px;
+    padding: 10%;
+    background: transparent;
+    transition: 300ms ease-out;
+    border-radius: 15px;
+    border: 2px solid transparent;
+}
+
+.project-container:hover {
+    scale:1.1;
+    border-color: var(--title-color);
+    color: transparent !important;
+    background: linear-gradient(
+        135deg, 
+        var(--tertiary-color),
+        transparent,
+        var(--tertiary-color), 
+        transparent,
+        transparent);
+    background-size: 200% 200%;
+    background-position: 100% 50%;
+    animation: backgroundRotation 2.5s;
+}
+
+@keyframes backgroundRotation {
+    0%{background-position:100% 0%}
+    100%{background-position:100% 50%}
+    /* 100%{background-position:100% 0%} */
+}

@@ -9,6 +9,8 @@ import { ProjectsComponent } from './projects/projects.component';
 import { TechnologiesComponent } from './technologies/technologies.component';
 import { ContactsComponent } from './contacts/contacts.component';
 import { MouseTrailerModule } from './mouse-trailer/mouse-trailer.module';
+import { HttpClientModule } from '@angular/common/http';
+import { ProjectComponent } from './projects/project/project.component';
 
 @NgModule({
   declarations: [
@@ -19,11 +21,14 @@ import { MouseTrailerModule } from './mouse-trailer/mouse-trailer.module';
     ProjectsComponent,
     TechnologiesComponent,
     ContactsComponent,
+    ProjectComponent,
   ],
   imports: [
     BrowserModule,
-    MouseTrailerModule
+    MouseTrailerModule,
+    HttpClientModule
   ],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  providers: [],
 })
 export class AppModule { }
