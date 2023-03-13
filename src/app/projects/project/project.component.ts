@@ -1,6 +1,4 @@
-import { Component, Input, OnInit, ViewChild } from '@angular/core';
-import { ChartConfiguration, ChartData, ChartType } from 'chart.js';
-import { BaseChartDirective } from 'ng2-charts';
+import { Component, Input, OnInit } from '@angular/core';
 import { Language } from 'src/models/language';
 import { Project } from 'src/models/project';
 import { ProjectService } from 'src/services/project.services';
@@ -13,8 +11,6 @@ import { ProjectService } from 'src/services/project.services';
 export class ProjectComponent implements OnInit {
 
   @Input() project!: Project;
-  @ViewChild(BaseChartDirective) chart: BaseChartDirective | undefined;
-
 
   languages!: string[];
   shares!: number[];
@@ -41,31 +37,11 @@ export class ProjectComponent implements OnInit {
         this.languages = [];
         this.shares = [];
         console.log(this.project.languages)
-        for(let language of this.project.languages) {
+        for (let language of this.project.languages) {
           this.languages.push(language.name);
           this.shares.push(language.share);
         }
       }
     });
   }
-
-  // Pie
-  public pieChartOptions: ChartConfiguration['options'] = {
-    responsive: true,
-    plugins: {
-      legend: {
-        display: true,
-        position: 'top',
-      },
-    }
-  };
-
-  public pieChartData: ChartData<'pie', number[], string | string[]> = {
-    labels: this.languages,
-    datasets: [{
-      data: this.shares
-    }]
-  };
-  public pieChartType: ChartType = 'pie';
-
 }
