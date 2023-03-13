@@ -8,37 +8,16 @@ import { Project } from "src/models/project";
   providedIn: 'root',
 })
 export class ProjectService {
-    
-    urlProjects: string = "https://api.github.com/users/stutenexe/repos";
 
-    constructor(private http: HttpClient) {}
+  urlProjects: string = "https://api.github.com/users/stutenexe/repos";
 
-    getProjects(): Observable<Project[]> {
-      return this.http.get<Project[]>(this.urlProjects)
-        .pipe(map((projects: Project[]) => {
-            for(let project of projects) {
-              this.getLanguages(project.languages_url).subscribe({
-                next: (data: Language[]) => project.languages = data                
-              });
-            }
-            return projects;
-        })
-      );
-    }
+  constructor(private http: HttpClient) { }
 
-    getLanguages(url: string): Observable<Language[]> {
-      return this.http.get(url)
-      .pipe(map((data: Object) => {
-        let languages: Language[] = [];
-        let sumLines = 0;
-        Object.values(data).forEach(value => sumLines += value)
-        for(let i = 0; i < Object.keys(data).length; i++) {
-          let language: Language = new Language();
-          language.name =  Object.keys(data)[i];
-          language.share = Math.round((Object.values(data)[i] / sumLines) * 100);
-          languages.push(language);
-        }
-        return languages;
-      }));
-    }
+  getProjects(): Observable<Project[]> {
+    return this.http.get<Project[]>(this.urlProjects);
+  }
+
+  getLanguages(url: string): Observable<any[]> {
+    return this.http.get<any[]>(url);
+  }
 }

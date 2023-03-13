@@ -20,7 +20,9 @@ export class ProjectsComponent implements OnInit {
     this.sub = this.projectService.getProjects().subscribe({
         next: (data: Project[]) => {
           this.projects = data;
-          console.log(data);
+          for(let i = 0; i < data.length; i++) {
+            this.projects[i].languages = data[i].languages;
+          }
         }
       });
     

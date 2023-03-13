@@ -11,6 +11,7 @@ import { ContactsComponent } from './contacts/contacts.component';
 import { MouseTrailerModule } from './mouse-trailer/mouse-trailer.module';
 import { HttpClientModule } from '@angular/common/http';
 import { ProjectComponent } from './projects/project/project.component';
+import { NgChartsModule } from 'ng2-charts';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { ProjectComponent } from './projects/project/project.component';
   imports: [
     BrowserModule,
     MouseTrailerModule,
-    HttpClientModule
+    HttpClientModule,
+    NgChartsModule
   ],
   bootstrap: [AppComponent],
   providers: [],
