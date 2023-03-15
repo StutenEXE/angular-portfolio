@@ -1,6 +1,6 @@
 <div class="project-container">
     <a [href]="project.html_url">
-        <h4>{{ project.name }}</h4>
+        <h4 class="project-name">{{ project.name }}</h4>
     </a>
     <div class="languages">
         <p *ngFor="let language of project.languages" class="language">{{ language.name }} - {{ language.share }}%</p>

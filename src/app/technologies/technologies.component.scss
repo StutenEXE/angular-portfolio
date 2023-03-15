@@ -1,0 +1,48 @@
+.technologies-container {
+    padding-top: 5%;
+    width: 90vw;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 3vw;
+}
+
+.technology {
+    perspective: 20vw ;
+    width: 20vw;
+    height: 20vw;
+    border-radius: 15px;
+    position: relative;
+    border: 2px solid transparent;
+    transform-style: preserve-3d;
+    will-change: transform border;
+    transition: 500ms;
+}
+
+.technology-image {
+    width: 100%;
+    overflow: hidden;
+    border-radius: 15px;
+}
+
+.technology:hover {
+    transform: translateZ(4vw) rotateX(20deg) rotateY(30deg);
+    border: 2px solid var(--title-color); 
+
+    .technology-title {
+        transform: translateZ(4vw);
+    }
+}
+
+.technology-title {
+    color: var(--text-color);
+    position: absolute;
+    top: 6%;
+    right: 6%;
+    transform: translateY(-50%);
+    transition: transform 500ms;
+
+}
