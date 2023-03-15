@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Technology } from 'src/models/technology';
+import { TechnologyService } from 'src/services/technology.services';
 
 @Component({
   selector: 'app-technologies',
@@ -7,9 +9,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TechnologiesComponent implements OnInit {
 
-  constructor() { }
+  technologies: Technology[] = [];
+
+  constructor(private technologyService: TechnologyService) { }
 
   ngOnInit(): void {
+    this.technologyService.getTechnologies().subscribe({
+      next: (data) => this.technologies = data
+    })
   }
 
 }

@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent implements OnInit {
-  TECHS: string[] = ["Java Springboot", "Java", "VB.NET", "PHP", "JavaScript", "SQL", "C", "C++", "Python", "Angular"];
+  TECHS: string[] = ["Java Springboot", "Java", "VB.NET", "PHP", "JavaScript", "TypeScript", "SQL", "C", "C++", "Python", "Angular"];
   tech: string = "";
   idxNextTech: number = 0;
 

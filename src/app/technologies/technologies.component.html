@@ -1,1 +1,7 @@
-<p>technologies works!</p>
+<div class="technologies-container">
+    <figure *ngFor="let technology of technologies">
+        <img [src]="technology.image_src" [alt]="technology.name">
+        <figcaption>{{ technology.name }}</figcaption>
+    </figure>
+
+</div>
