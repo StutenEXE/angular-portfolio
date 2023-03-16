@@ -11,9 +11,9 @@
 }
 
 .technology {
-    perspective: 20vw ;
-    width: 20vw;
-    height: 20vw;
+    perspective: 10vw ;
+    width: 10vw;
+    height: 10vw;
     border-radius: 15px;
     position: relative;
     border: 2px solid transparent;
@@ -33,7 +33,7 @@
     border: 2px solid var(--title-color); 
 
     .technology-title {
-        transform: translateZ(4vw);
+        transform: translateZ(2vw);
     }
 }
 
@@ -44,5 +44,4 @@
     right: 6%;
     transform: translateY(-50%);
     transition: transform 500ms;
-
 }
