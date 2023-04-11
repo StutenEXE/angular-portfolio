@@ -1,3 +1,6 @@
 <div class="projects-container">
-    <app-project *ngFor="let project of projects" [project]="project"></app-project>
+    <h1> Mes projets </h1>
+    <div class="flex-container">
+        <app-project *ngFor="let project of projects" [project]="project" style="width: 20%"></app-project>
+    </div>
 </div>
